@@ -1,0 +1,139 @@
+*{
+ box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255, 225, 225, 0.5), 
+    rgba(255, 225, 225, 0.5)), url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+.link{
+    margin: 0 auto;
+}
+.Mobile{
+    height: 650px;
+    width: 350px;
+    background-color: white;
+    border: 1px solid white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 41%;
+}
+.ime{
+    clip-path: polygon(0 0, 100% 0, 100% 80%,0 50%);
+}
+.menu{
+    margin-top: 5px;
+    height: 2px;
+    width: 20px;
+    color: white;
+    border: 1px solid white;
+}
+.Top{
+    position: relative;
+    padding: 20px;
+}
+.Icon{
+    position: relative;
+     
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    justify-content: space-between;
+}
+#timeline{
+    margin-top: 20px;
+    color: white;
+    font-size: 1.5em;
+}
+.Header{
+    position: relative;
+    margin-top: -100%;  
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    justify-content: space-between;
+}
+.Profile{
+   display: flex;
+   flex-direction: row;
+   margin-top: 40px;   
+   justify-content: space-between;
+   width: 270px;
+   
+}
+#imagee{
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+#aboutMe{
+    margin-top: 25px;
+    position: relative;
+    color: white;
+    font-size: 1.3em;
+}
+#des{
+    margin-top: 5px;
+    font-size: 0.7em;
+}
+.HRR{
+    margin-top: -50px;
+    width: 1px;
+    height: 480px;
+    margin-left: 20px;
+}
+.Options{
+    margin-top: 20px;
+    position: relative;
+    margin-right: 50px;
+    margin-left: 20%;
+    background-color: red;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 1px solid red;
+}
+.one{
+    margin: -5px 0 0 7px; 
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 25px;
+}
+.two{
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 20px;
+}
+.three{
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: white;
+    color: white;
+    height: 2px;
+    width: 15px;
+}
+#myTasks{
+    margin-top: 20%;
+    margin-left: -50%;
+    position: absolute;
+   
+}
+.An{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+}
+#dateTime{
+
+    position: absolute;
+    font-size: 0.7em;
+    color: gray;
+    margin-top: 30%;
+    margin-left: -53%;
+}
