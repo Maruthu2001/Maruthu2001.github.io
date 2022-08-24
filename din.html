@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="din.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <p class="link">Visit    <a href="https://www.google.com">Google</a></p>
+<body id="Body">
+     <p class="link">Visit    <a href="https://www.google.com">Google</a></p>
     <div class="Mobile">
            <div class="Half">
             <img class="ime" height="350px" width="348px" src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80" alt="no-image">
@@ -32,14 +32,33 @@
             <hr class="HRR">
             <h2 id="myTasks">My Tasks</h2>
             <h3 id="dateTime">JANUARY 3,2022</h3>
-            <div class="Options"><img src="" alt="">
-            <div class="Wifi">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
+            <div id="home">
+        
+        </div>
+        <div id="slee">
+           
+        </div>
+            <div class="Options">
+            
+                
+<div id="circularMenu1" class="circular-menu circular-menu-left active">
+
+
+  <a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');  ">
+    <i class="fa fa-bars"></i>
+  </a>
+  <menu class="items-wrapper">
+    <a href="#home" class="menu-item fa fa-check-circle-o"></a>
+    <a href="#slee" class="menu-item fa fa-clock-o"></a>
+    <a href="#" class="menu-item fa fa-heart-o"></a>
+    <a href="#" class="menu-item fa fa-star-o"></a>
+  </menu>
             </div>
-            </div>
+            
            </div>
     </div>
-</body>
+    
+
+    </body>
+<script src="chronometer.js"></script>
 </html>
