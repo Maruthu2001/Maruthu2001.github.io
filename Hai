@@ -1,1 +1,144 @@
 
+[21/09, 8:36 pm] Sathish Vaken: import java.util.*;
+class Student{
+    int rollno,rank;
+    String name,address;
+    public Student(int rollno,String name,String address,int rank){
+        this.rollno =rollno;
+        this.name =name;
+        this.address = address;
+        this.rank = rank;
+    }
+    public String toString(){
+        return this.rollno+" "+this.name+" "+this.address+" "+this.rank;
+    }
+}
+class Sortbyroll implements Comparator<Student>{
+    public int compare(Student a,Student b){
+        return a.rollno-b.rollno;
+    }
+}
+class Sortbyname implements Comparator<Student>{
+    public int compare(Student a,Student b){
+        return a.name.compareTo(b.name);
+    }
+}
+class SortbyRank implements Comparator<Student>{
+    private boolean ascending;
+    public SortbyRank(boolean ascending){
+        this.ascending =ascending;
+    }
+    public int compare(Student a, Student b){
+        if(ascending){
+            return a.rank-b.rank;
+        }
+        else{
+            return b.rank-a.rank;
+        }
+    }
+}
+public class Main{
+     static Scanner inp = new Scanner(System.in);
+     static ArrayList<Student> list = new ArrayList<>();
+    public static void main(String [] args){
+        int n=0;
+        do{
+            System.out.println("Student Interactive Console:");
+            System.out.println("1). Add User");
+            System.out.println("2). Sort Student List by Roll no");
+            System.out.println("3). Sort Student List by Name");
+            System.out.println("4). sort Student List by Rank");
+            System.out.println("5). Exit from System");
+            System.out.println();
+            System.out.println("Enter your choice :");
+            n = inp.nextInt();
+            if(n==1){
+                addUser();
+            }
+            else if(n==2){
+                System.out.println("Student List sorted by rollno");
+                Collections.sort(list, new Sortbyroll());
+                for(Student s:list){
+                    System.out.println(s);
+                }
+            }
+            else if(n==3){
+                System.out.println("Student List sorted by name");
+                 Collections.sort(list, new Sortbyname());
+                 for(Student s:list){
+                    System.out.println(s);
+                }
+            }
+            else if(n==4){
+                System.out.println("Sort by ascending or descending (asc / dsc)");
+                String sor = inp.next();
+                boolean flag = sor.equals("asc")?true:false;
+                Collections.sort(list,new SortbyRank(flag));
+                for(Student s:list){
+                    System.out.println(s);
+                }
+            }
+        }while(n<5 && n>0);
+    }
+    public static void addUser(){
+        System.out.println("Enter the rollno, name, address and rank (seperated by comma)");
+        String input =inp.next();
+        String arr[]=input.split(",");
+        int num1 = Integer.parseInt(arr[0]);
+        int num2 = Integer.parseInt(arr[3]);
+        list.add(new Student(num1,arr[1],arr[2],num2));
+    }
+}
+[21/09, 8:37 pm] Sathish Vaken: import java.util.*;
+class Hall { 
+    String name;
+    String contactNumber;
+    Double perDay;
+    String contactName;
+    Hall(){}
+    Hall(String name,String contactNumber,Double perDay,String contactName){
+        this.name=name;
+        this.contactNumber=contactNumber;
+        this.perDay = perDay;
+        this.contactName = contactName;
+    }
+    public void display(ArrayList<Hall> hall){
+        System.out.printf("%-15s%-15s%-15s%-15s","Name","Contact Number","CostperDay","Contact Name");
+        for(int i=0;i<hall.size();i++){
+            Hall hl = hall.get(i);
+            System.out.println();
+        System.out.printf("%-15s%-15s%-15s%-15s",hl.name,hl.contactNumber,hl.perDay,hl.contactName);
+        }
+    }
+    public void remove(ArrayList<Hall> hall,int i){
+        hall.remove(i);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner inp = new Scanner(System.in);
+		int n=inp.nextInt();
+		ArrayList<Hall> list = new ArrayList<>();
+		
+		for(int i=0;i<n;i++){
+		    inp.nextLine();
+		     String name=inp.nextLine();
+		    String phone =inp.next();
+		    inp.nextLine();
+		    int num = inp.nextInt();
+		    String con = inp.next();
+		    list.add(new Hall(name,phone,(double)num,con));
+		}
+		inp.nextLine();
+		int rem =inp.nextInt();
+		if(rem>=list.size()){
+		    System.out.println("List is empty");
+		}
+		else{
+		Hall h=new Hall() ;
+		h.remove(list,rem);
+		h.display(list);
+		}
+	}
+}
